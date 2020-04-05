@@ -1,0 +1,75 @@
+
+/* Style the submit button on the form! */
+.ripple{
+  color:white;
+  background-color: rgb(139, 0, 0);
+  padding: 10px 20px 10px 20px;
+  border-radius: 35px;
+  box-shadow: 1px 5px #999;
+  margin-bottom: 10px;
+}
+
+/* Ripple effect */
+.ripple {
+  background-position: center;
+  transition: background 1.0s;
+}
+.ripple:hover {
+  background: rgb(139, 0, 0) radial-gradient(circle, transparent 1%, rgb(139, 0, 0) 1%) center/15000%;
+}
+.ripple:active {
+  background-color: rgb(230, 0, 0);
+  background-size: 100%;
+  box-shadow: 0 5px #666;
+  transform: translateY(4px);
+  transition: background 0s;
+}
+
+
+fieldset {
+  position: relative;
+}
+
+legend {
+  position: absolute;
+  color: white;
+  background-color: black;
+  padding: 3px;
+  bottom: 0;
+  right: 0;
+}
+
+
+#add-data{
+  /* background: url(https://source.unsplash.com/TV2gg2kZD1o/1600x800);
+  background-repeat: no-repeat; */
+  background-color: rgb(255, 255, 179,0.50);
+  margin: 5px 20px 5px 20px;
+  width: 50vw;
+  transform: translate(50%, 0%);
+  /* height: 450px; */
+  text-align: center;
+  /* display: flex; */
+  /* color: white; */
+  box-shadow: 3px 10px 20px 5px rgba(0, 0, 0, .5);
+  margin-bottom: 30px;
+}
+
+
+input {
+
+  font-size: 16px;
+  border: 1px solid rgba(10, 180, 180, 1);
+  border-top: none;
+  border-left: none;
+  border-right: none;
+  background: rgba(20, 20, 20, .2);
+}
+
+fieldset#text > input{
+  width:200px;
+}
+
+fieldset#num > input:not([type="radio"]){
+  width:40px;
+}

@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<head>
+  <script src="snacksCode.js"></script>
+  <script src="submitAddData.js"></script>
+  <script src="hideData.js"></script>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/special.css">
+  <link rel="stylesheet" href="css/form.css">
+</head>
+
+
+<body>
+  <h1>Snacks Project</h1>
+<p class="dropdown-label">
+  Choose a snack to learn about it:
+</p>
+<!-- <input type="text" id="imput-1" value="oreo"> -->
+<!-- create a dropdown -->
+<select id="select-a-snack" onclick="snackInfoFinder()">
+  <option value="oreo">oreo</option>
+  <option value="nut-bar" >nut bar</option>
+  <option value="pretzels">pretzels</option>
+  <option value="popcorn">popcorn</option>
+</select>
+
+<button onclick="snackInfoFinder()">Get Info</button>
+<div id="output-1">Answers here soon</div>
+
+<hr>
+<h3>Selection Section:</h3>
+
+<p class="dropdown-label">
+  Select a flavor:
+</p>
+<select id="select-flavor">
+  <option value="chocolate">chocolate</option>
+  <option value="salty" >salty</option>
+</select>
+
+<!-- snackSelector -->
+<button onclick="snackSelector()">Filter</button>
+<div id="output-2"></div>
+
+<!--
+
+HIDDEN SECTION!
+ADD DATA
+ -->
+<div class="hide-data-container">
+  <button onclick="hideData()">Click to hide</button>
+</div>
+
+
+<div id="add-data">
+<h3>Add data:</h3>
+<p>This section allows you to add (but not remove) data from our database of foods!</p>
+
+<form onsubmit="submitAddData()">
+  <fieldset id="text">
+    <legend>Text data:</legend>
+
+      <label for="food-name">Name of the food (3 to 30 characters):</label><br>
+      <input type="text" id="food-name" name="food-name" required="true" minlength="3" maxlength="30"><br><br>
+
+    <label for="company-name">Company Name (brand):</label><br>
+    <input type="text" id="company-name" name="company-name"><br><br>
+
+    <label for="flavor">Main Flavor (what you taste the most):</label><br>
+    <input type="text" id="flavor" name="flavor"><br><br>
+</fieldset>
+
+<fieldset id="num">
+    <legend>Numerical data:</legend>
+    <label for="weight">Weight of food (in grams):</label><br>
+    <input type="number" id="weight" name="weight"><br><br>
+
+    <label for="calories">Calories of food:</label><br>
+    <input type="number" id="calories" name="calories"><br><br>
+
+    <label for="calories-from-fat">Calories from fat:</label><br>
+    <input type="number" id="calories-from-fat" name="calories-from-fat"><br><br>
+
+    <label for ="is-healthy"> Is the food healthy?</label><br>
+    <input type="radio" id="healthy" name="is-healthy" value="healthy">
+    <label for="healthy">Healthy</label><br>
+
+    <input type="radio" id="unhealthy" name="is-healthy" value="unhealthy">
+    <label for="unhealthy">Unhealthy</label><br>
+</fieldset>
+
+    <input type="submit" class="ripple" value="Submit">
+    <br>
+</form>
+
+</div>
+
+
+
+</body>

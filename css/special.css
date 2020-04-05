@@ -1,0 +1,27 @@
+.hide-data-container{
+  margin: 20px 15px 20px 15px;
+
+}
+
+.hide-data-container > button{
+  display: inline-block;
+  padding: 10px;
+  font-size: 10px;
+  cursor: pointer;
+  text-align: center;
+  text-decoration: none;
+  outline: none;
+  color: #fff;
+  background-color: rgb(139, 0, 0);
+  border: none;
+  border-radius: 15px;
+  box-shadow: 1px 5px #999;
+}
+
+.hide-data-container > button:hover {background-color: rgb(230, 0, 0)}
+
+.hide-data-container > button:active {
+  background-color: rgb(230, 0, 0);
+  box-shadow: 0 5px #666;
+  transform: translateY(4px);
+}
