@@ -1,0 +1,5 @@
+# ignore any secret folders
+secret
+
+# ignore built in file types
+*.DS_Store
