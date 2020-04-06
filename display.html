@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <head>
   <script src="snacksCode.js"></script>
-  <script src="submitAddData.js"></script>
   <script src="hideData.js"></script>
+  <script src="submitAddData.js"></script>
   <link rel="stylesheet" href="css/style.css">
   <link rel="stylesheet" href="css/special.css">
   <link rel="stylesheet" href="css/form.css">
@@ -55,7 +55,7 @@ ADD DATA
 <h3>Add data:</h3>
 <p>This section allows you to add (but not remove) data from our database of foods!</p>
 
-<form onsubmit="submitAddData()">
+<form onsubmit="addData(); return false;" id="add-data-form">
   <fieldset id="text">
     <legend>Text data:</legend>
 
@@ -63,31 +63,30 @@ ADD DATA
       <input type="text" id="food-name" name="food-name" required="true" minlength="3" maxlength="30"><br><br>
 
     <label for="company-name">Company Name (brand):</label><br>
-    <input type="text" id="company-name" name="company-name"><br><br>
+    <input type="text" id="company-name" name="company-name" required="true"><br><br>
 
     <label for="flavor">Main Flavor (what you taste the most):</label><br>
-    <input type="text" id="flavor" name="flavor"><br><br>
+    <input type="text" id="flavor" name="flavor" required="true"><br><br>
 </fieldset>
 
 <fieldset id="num">
     <legend>Numerical data:</legend>
     <label for="weight">Weight of food (in grams):</label><br>
-    <input type="number" id="weight" name="weight"><br><br>
+    <input type="number" id="weight" name="weight" required="true"><br><br>
 
     <label for="calories">Calories of food:</label><br>
-    <input type="number" id="calories" name="calories"><br><br>
+    <input type="number" id="calories" name="calories" required="true"><br><br>
 
     <label for="calories-from-fat">Calories from fat:</label><br>
-    <input type="number" id="calories-from-fat" name="calories-from-fat"><br><br>
+    <input type="number" id="calories-from-fat" name="calories-from-fat" required="true"><br><br>
 
     <label for ="is-healthy"> Is the food healthy?</label><br>
-    <input type="radio" id="healthy" name="is-healthy" value="healthy">
+    <input type="radio" id="healthy" name="is-healthy" value="healthy" required="true">
     <label for="healthy">Healthy</label><br>
 
     <input type="radio" id="unhealthy" name="is-healthy" value="unhealthy">
     <label for="unhealthy">Unhealthy</label><br>
 </fieldset>
-
     <input type="submit" class="ripple" value="Submit">
     <br>
 </form>
