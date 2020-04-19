@@ -1,4 +1,9 @@
+import { readJSON } from './loadData.js';
+
 function addData(){
+
+  var jsonData = readJSON("data/test.json")
+
 
   myData = {}
 
@@ -25,4 +30,8 @@ function addData(){
   }
   // Data looks good!
   console.log(myData)
+
+  // Save the file
+  // Assume we have a nice way of loading the data (And saving it)
+
 }
