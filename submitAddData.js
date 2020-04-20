@@ -1,8 +1,30 @@
-import { readJSON } from './loadData.js';
+function loadJSON(jsonPath) {
+  var xhr = new XMLHttpRequest();
+
+  xhr.onreadystatechange = (e) => {
+    if (xhr.readyState !== 4) {
+      return;
+    }
+
+    if (xhr.status === 200) {
+      console.log('SUCCESS', xhr.responseText);
+      callback(JSON.parse(xhr.responseText));
+    } else {
+      console.warn('request_error');
+    }
+  };
+
+  xhr.open('GET', 'https://httpbin.org/user-agent');
+  xhr.send();
+}
+
+
+
 
 function addData(){
 
-  var jsonData = readJSON("data/test.json")
+  var jsonData = loadJSON("data/test.json")
+  console.info(jsonData)
 
 
   myData = {}
@@ -29,7 +51,7 @@ function addData(){
 
   }
   // Data looks good!
-  console.log(myData)
+  // console.log(myData)
 
   // Save the file
   // Assume we have a nice way of loading the data (And saving it)
